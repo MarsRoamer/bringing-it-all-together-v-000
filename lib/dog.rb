@@ -62,7 +62,7 @@ class Dog
         Dog.new(hashed)
       else
         Dog.create(hash)
-      end  
+      end
     end
 
 
