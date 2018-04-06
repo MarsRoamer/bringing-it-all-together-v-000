@@ -83,7 +83,7 @@ class Dog
     end
 
     def update(param)
-      binding.pry 
+      binding.pry
     end
 
 
