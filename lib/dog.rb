@@ -65,6 +65,8 @@ class Dog
       end
     end
 
+    def self.new_from_db(row)
+      binding.pry
 
 
 
