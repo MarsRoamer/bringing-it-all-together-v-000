@@ -54,6 +54,8 @@ class Dog
 
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
       if !dog.empty?
+        hash = {}
+        hash[:id] = dog[0][0]
         binding.pry
         test = Dog.new(dog)
         binding.pry
