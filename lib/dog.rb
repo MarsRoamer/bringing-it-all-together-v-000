@@ -35,6 +35,7 @@ class Dog
     end
 
     def self.create(hash)
+      binding.pry
       dog = Dog.new(hash)
       dog.save
 
@@ -54,10 +55,10 @@ class Dog
 
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
       hash = {}
-      hash[:id] = dog[0][0]
-      hash[:name] = dog[0][1]
-      hash[:breed] = dog[0][2]
       if !dog.empty?
+        hash[:id] = dog[0][0]
+        hash[:name] = dog[0][1]
+        hash[:breed] = dog[0][2]
         Dog.new(hash)
       else
         test = Dog.create(hash)
