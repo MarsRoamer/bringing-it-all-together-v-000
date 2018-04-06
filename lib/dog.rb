@@ -79,7 +79,8 @@ class Dog
       hash[:id] = dog[0]
       hash[:name] = dog[1]
       hash[:breed] = dog[2]
-      Dog.new(hash)
+      test = Dog.new(hash)
+      binding.pry
     end
 
 
