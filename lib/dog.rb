@@ -56,8 +56,9 @@ class Dog
       if !dog.empty?
         hash = {}
         hash[:id] = dog[0][0]
-        binding.pry
-        test = Dog.new(dog)
+        hash[:name] = dog[0][1]
+        hash[:breed] = dog[0][2]
+        test = Dog.new(hash)
         binding.pry
       end
 
