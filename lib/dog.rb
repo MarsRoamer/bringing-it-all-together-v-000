@@ -71,6 +71,9 @@ class Dog
       hash[:name] = row[1]
       hash[:breed] = row[2]
       Dog.new(hash)
+    end
+
+    def self.find_by_name(name)
 
     end
 
