@@ -77,8 +77,8 @@ class Dog
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name)
       hash = {}
       hash[:id] = dog[0][0]
-      hash[:name] = dog[1][1]
-      hash[:breed] = dog[2][2]
+      hash[:name] = dog[0][1]
+      hash[:breed] = dog[0][2]
       test = Dog.new(hash)
       binding.pry
     end
