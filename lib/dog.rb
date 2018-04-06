@@ -42,7 +42,7 @@ class Dog
 
     def self.find_by_id(id)
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE id = id")[0]
-    
+
       hash = {}
       hash[:id] = dog[0]
       hash[:name] = dog[1]
