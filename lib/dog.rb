@@ -64,10 +64,7 @@ class Dog
 
         test = Dog.create(hash)
       end
-
-
-
-
+      test
     end
 
 
