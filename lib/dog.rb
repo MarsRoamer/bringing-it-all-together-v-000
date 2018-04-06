@@ -56,7 +56,7 @@ class Dog
       if !dog.empty?
         test = Dog.new(dog[0], dog[1], dog[2])
         binding.pry
-        
+
 
 
     end
