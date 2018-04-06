@@ -82,7 +82,7 @@ class Dog
       test = Dog.new(hash)
     end
 
-    def update(param)
+    def update
       binding.pry
     end
 
