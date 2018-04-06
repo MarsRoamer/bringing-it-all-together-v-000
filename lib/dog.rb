@@ -80,7 +80,7 @@ class Dog
       hash[:name] = dog[0][1]
       hash[:breed] = dog[0][2]
       test = Dog.new(hash)
-      binding.pry
+
     end
 
 
