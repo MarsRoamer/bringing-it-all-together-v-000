@@ -83,7 +83,9 @@ class Dog
     end
 
     def update
-      binding.pry
+      sql = "UPDATE dogs SET name = ? WHERE id = ?"
+      DB[:conn].execute(sql, self.name, self.id)
+    
     end
 
 
