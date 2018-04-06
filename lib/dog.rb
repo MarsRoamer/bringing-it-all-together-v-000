@@ -53,13 +53,16 @@ class Dog
     def self.find_or_create_by(hash)
 
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
+      hash = {}
+      hash[:id] = dog[0][0]
+      hash[:name] = dog[0][1]
+      hash[:breed] = dog[0][2]
       if !dog.empty?
-        hash = {}
-        hash[:id] = dog[0][0]
-        hash[:name] = dog[0][1]
-        hash[:breed] = dog[0][2]
         Dog.new(hash)
+      else
+        test = Dog.create(hash)
       end
+
 
 
 
