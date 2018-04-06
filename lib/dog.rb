@@ -61,7 +61,7 @@ class Dog
         hashed[:breed] = dog[0][2]
         Dog.new(hash)
       else
-        
+
         test = Dog.create(hash)
       end
 
