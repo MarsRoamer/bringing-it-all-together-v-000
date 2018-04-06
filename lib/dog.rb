@@ -60,8 +60,9 @@ class Dog
         hashed[:name] = dog[0][1]
         hashed[:breed] = dog[0][2]
         Dog.new(hashed)
-      # else
-      #   test = Dog.create(hash)
+      else
+        test = Dog.create(hash)
+        binding.pry
       end
       # test
     end
