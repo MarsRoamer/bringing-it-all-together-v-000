@@ -58,8 +58,7 @@ class Dog
         hash[:id] = dog[0][0]
         hash[:name] = dog[0][1]
         hash[:breed] = dog[0][2]
-        test = Dog.new(hash)
-        binding.pry
+        Dog.new(hash)
       end
 
 
